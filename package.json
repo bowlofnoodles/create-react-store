@@ -1,0 +1,67 @@
+{
+  "name": "create-mini-react-store",
+  "version": "0.0.1",
+  "description": "simple create-react-store",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "rm -rf ./lib && cross-env NODE_ENV=production rollup -c && tsc",
+    "commit": "git-cz",
+    "version": "standard-version -- --release-as",
+    "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md}'"
+  },
+  "keywords": [
+    "create-react-store",
+    "createContext",
+    "Context.Provider",
+    "useContext"
+  ],
+  "files": [
+    "/lib"
+  ],
+  "author": {
+    "name": "bowlofnoodles",
+    "email": "jerrycheungg@gmail.com"
+  },
+  "maintainers": [
+    "bowlofnoodles<jerrycheungg@gmail.com>"
+  ],
+  "repositories": [
+    "https://github.com/bowlofnoodles/create-react-store"
+  ],
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{ts,jsx,tsx,less,css,md}": [
+      "prettier --write"
+    ]
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.14.5",
+    "@babel/preset-env": "^7.14.5",
+    "@babel/preset-react": "7.14.5",
+    "@babel/preset-typescript": "^7.14.5",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-node-resolve": "^13.0.0",
+    "@rollup/plugin-replace": "^5.0.2",
+    "@types/react": "^18.0.28",
+    "commitizen": "^4.2.4",
+    "cross-env": "^7.0.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "lint-staged": "^13.1.2",
+    "prettier": "^2.8.4",
+    "react": "^18.2.0",
+    "rollup": "^2.51.1",
+    "standard-version": "^9.3.0",
+    "typescript": "^4.3.4",
+    "yorkie": "^2.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {},
+  "peerDependencies": {}
+}
